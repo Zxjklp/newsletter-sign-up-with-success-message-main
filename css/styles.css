@@ -98,22 +98,25 @@ a {
 }
 
 body {
+  display: grid;
+  place-items: center;
   font-family: var(--font-family);
   font-size: var(--fs-body);
   background-color: var(--color-charcoal-grey);
   color: var(--color-dark-slate-grey);
 }
 
-/* Styles for the container */
 .container {
+  display: block;
+  max-width: 23.4375rem;
   background-color: var(--color-white);
-  min-height: 100vh;
+  border-radius: 1.25rem;
 }
-.container img {
+.container picture img {
   height: auto;
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
-/* Styles for the sign-up form */
 .signup-form {
   padding: 1.5rem 1.5rem 2.5rem;
 }
@@ -131,7 +134,6 @@ body {
   margin-bottom: 2.5rem;
 }
 .signup-form li {
-  /* color: var(--color-dark-slate-grey); */
   padding-left: 2rem;
   margin-bottom: 0.625rem;
   background: url("../assets/images/icon-list.svg") no-repeat left top;
@@ -142,9 +144,21 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .signup-form label {
-  /* color: var(--color-dark-slate-grey); */
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   font-weight: var(--fw-bold);
 }
 .signup-form input[type="text"] {
@@ -177,7 +191,6 @@ body {
   box-shadow: 0 1rem 1.5rem rgba(255, 97, 85, 0.3);
 }
 
-/* Styles for the success message */
 .success-message {
   display: none;
   flex-direction: column;
@@ -213,26 +226,12 @@ body {
   letter-spacing: 0.6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 2.5rem;
 }
 .success-message button:hover {
   background: linear-gradient(to right, var(--color-tomato), #ff527b);
   box-shadow: 0 1rem 1.5rem rgba(255, 97, 85, 0.3);
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.label-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Styles for the error message */
 .error-message {
   display: none;
   color: var(--color-tomato);
@@ -247,4 +246,42 @@ body {
   color: var(--color-tomato);
   border-color: var(--color-tomato);
   background-color: hsla(4, 100%, 67%, 0.15);
+}
+
+@media (min-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    max-inline-size: 58rem;
+    padding: 1.5rem;
+    border-radius: 2.25rem;
+  }
+  .container picture {
+    flex: 1;
+  }
+  .container img {
+    width: 100%;
+  }
+
+  .signup-form {
+    flex: 1;
+  }
+  .signup-form h1 {
+    font-size: 3.5rem;
+  }
+
+  .success-message {
+    max-width: 31.5rem;
+    min-height: auto;
+    padding: 3rem;
+    border-radius: 2.25rem;
+  }
+  .success-message img {
+    margin-top: 0;
+  }
+  .success-message p {
+    margin-bottom: 2.5rem;
+  }
 }

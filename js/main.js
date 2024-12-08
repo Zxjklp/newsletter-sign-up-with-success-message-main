@@ -3,7 +3,7 @@ const form = document.querySelector("form");
 const emailInput = document.querySelector("[data-email-input]");
 const errorMessage = document.querySelector("[data-error]");
 const successMessage = document.querySelector(".success-message");
-const dismissButton = document.getElementById("dismiss-button");
+const dismissButton = document.querySelector(".dismiss-button");
 const emailDisplay = document.querySelector(".success-message strong");
 
 function validateEmail(email) {
@@ -40,7 +40,7 @@ form.addEventListener("submit", (e) => {
 });
 
 dismissButton.addEventListener("click", () => {
-  container.style.display = "block";
+  container.style.removeProperty('display');
   successMessage.style.display = "none";
   form.reset();
 });
