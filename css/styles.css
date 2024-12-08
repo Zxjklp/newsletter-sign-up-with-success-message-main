@@ -1,0 +1,250 @@
+/* CSS RESET */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* Add accessible line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --color-tomato: hsl(4, 100%, 67%);
+  --color-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-charcoal-grey: hsl(235, 18%, 26%);
+  --color-grey: hsl(231, 7%, 60%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --fs-body: 1rem; /* 16px */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  /* background-color: var(--color-charcoal-grey); */
+  color: var(--color-dark-slate-grey);
+}
+
+/* Styles for the container */
+.container {
+  /* display: none; */
+  background-color: var(--color-white);
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.container picture {
+  /* display: block; */
+  /* line-height: 0; */
+}
+
+.container img {
+  /* width: 100%; */
+  height: auto;
+}
+
+/* Styles for the sign-up form */
+.signup-form {
+  padding: 1.5rem 1.5rem 2.5rem;
+}
+
+.signup-form h1 {
+  /* color: var(--color-dark-slate-grey); */
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.5rem;
+}
+
+.signup-form p {
+  /* color: var(--color-dark-slate-grey); */
+  margin-bottom: 1.5rem;
+}
+
+.signup-form ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+}
+
+.signup-form li {
+  /* color: var(--color-dark-slate-grey); */
+  padding-left: 2rem;
+  margin-bottom: 0.625rem;
+  background: url("../assets/images/icon-list.svg") no-repeat left top;
+  background-size: 1.3125rem;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signup-form label {
+  /* color: var(--color-dark-slate-grey); */
+  font-size: 0.875rem; /* 14px */
+  font-weight: var(--fw-bold);
+}
+
+.signup-form input[type="email"] {
+  padding: 1rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.signup-form input[type="email"]::placeholder {
+  color: var(--color-grey);
+}
+
+.signup-form button {
+  background-color: var(--color-dark-slate-grey);
+  color: var(--color-white);
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background: linear-gradient(to right, var(--color-tomato), #ff527b);
+  box-shadow: 0 1rem 1.5rem rgba(255, 97, 85, 0.3);
+}
+
+/* Styles for the success message */
+.success-message {
+  display: none;
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: var(--color-white);
+  padding: 2.5rem 1.5rem;
+  min-height: 100vh;
+}
+
+.success-message img {
+  margin-top: 2.5rem;
+}
+
+.success-message.visible {
+  display: block;
+}
+
+.success-message h1 {
+  /* color: var(--color-dark-slate-grey); */
+  font-size: 2.5rem;
+  line-height: 1;
+  /* font-weight: var(--fw-bold); */
+  margin: 2.5rem 0 1.5rem;
+}
+
+.success-message p {
+  /* color: var(--color-dark-slate-grey); */
+  margin-bottom: auto;
+  /* line-height: 1.5; */
+}
+
+.success-message strong {
+  font-weight: var(--fw-bold);
+}
+
+.success-message button {
+  width: 100%;
+  background-color: var(--color-dark-slate-grey);
+  color: var(--color-white);
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2.5rem;
+}
+
+.success-message button:hover {
+  background: linear-gradient(to right, var(--color-tomato), #ff527b);
+  box-shadow: 0 1rem 1.5rem rgba(255, 97, 85, 0.3);
+}
