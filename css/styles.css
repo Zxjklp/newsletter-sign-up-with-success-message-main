@@ -104,11 +104,12 @@ body {
   font-size: var(--fs-body);
   background-color: var(--color-charcoal-grey);
   color: var(--color-dark-slate-grey);
+  padding: 1rem;
 }
 
 .container {
   display: block;
-  max-width: 23.4375rem;
+  max-inline-size: 23.4375rem;
   background-color: var(--color-white);
   border-radius: 1.25rem;
 }
@@ -273,7 +274,7 @@ body {
   }
 
   .success-message {
-    max-width: 31.5rem;
+    max-inline-size: 31.5rem;
     min-height: auto;
     padding: 3rem;
     border-radius: 2.25rem;
