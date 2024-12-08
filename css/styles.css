@@ -204,7 +204,7 @@ body {
 .success-message.visible {
   display: block;
 }
-.success-message h1 {
+.success-message h2 {
   font-size: 2.5rem;
   line-height: 1;
   margin: 2.5rem 0 1.5rem;
