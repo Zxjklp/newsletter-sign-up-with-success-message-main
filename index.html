@@ -47,14 +47,19 @@
           <li>And much more!</li>
         </ul>
         <form>
-          <label for="email">Email address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email@company.com"
-            required
-          />
+          <div class="form-group">
+            <div class="label-wrapper">
+              <label for="email">Email address</label>
+              <span class="error-message" data-error>Valid email required</span>
+            </div>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              data-email-input
+            />
+          </div>
           <button>Subscribe to monthly newsletter</button>
         </form>
       </section>
@@ -63,7 +68,12 @@
 
     <!-- Success message start -->
     <aside class="success-message">
-      <img src="./assets/images/icon-success.svg" alt="" width="64" height="64"/>
+      <img
+        src="./assets/images/icon-success.svg"
+        alt=""
+        width="64"
+        height="64"
+      />
       <h1>Thanks for subscribing!</h1>
       <p>
         A confirmation email has been sent to
