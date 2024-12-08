@@ -24,60 +24,64 @@
     </title>
   </head>
   <body>
-    <section class="container">
-      <picture>
-        <source
-          media="(min-width: 960px)"
-          srcset="./assets/images/illustration-sign-up-desktop.svg"
-        />
-        <img
-          src="./assets/images/illustration-sign-up-mobile.svg"
-          alt=""
-          width="375"
-          height="284"
-        />
-      </picture>
-      <section class="signup-form">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <form>
-          <div class="form-group">
-            <div class="label-wrapper">
-              <label for="email">Email address</label>
-              <span class="error-message" data-error>Valid email required</span>
+    <main>
+      <section class="container">
+        <picture>
+          <source
+            media="(min-width: 960px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            width="375"
+            height="284"
+          />
+        </picture>
+        <section class="signup-form">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          <form>
+            <div class="form-group">
+              <div class="label-wrapper">
+                <label for="email">Email address</label>
+                <span class="error-message" data-error
+                  >Valid email required</span
+                >
+              </div>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+                data-email-input
+              />
             </div>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="email@company.com"
-              data-email-input
-            />
-          </div>
-          <button>Subscribe to monthly newsletter</button>
-        </form>
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </section>
       </section>
-    </section>
 
-    <aside class="success-message">
-      <img
-        src="./assets/images/icon-success.svg"
-        alt=""
-        width="64"
-        height="64"
-      />
-      <h1>Thanks for subscribing!</h1>
-      <p>
-        A confirmation email has been sent to
-        <strong>ash@loremcompany.com</strong>. Please open it and click the
-        button inside to confirm your subscription.
-      </p>
-      <button class="dismiss-button">Dismiss message</button>
-    </aside>
+      <aside class="success-message">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt=""
+          width="64"
+          height="64"
+        />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <strong>ash@loremcompany.com</strong>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button class="dismiss-button">Dismiss message</button>
+      </aside>
+    </main>
   </body>
 </html>
