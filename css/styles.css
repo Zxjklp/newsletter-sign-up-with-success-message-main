@@ -104,18 +104,15 @@ body {
   font-size: var(--fs-body);
   background-color: var(--color-charcoal-grey);
   color: var(--color-dark-slate-grey);
-  padding: 1rem;
 }
 
 .container {
   display: block;
-  max-inline-size: 23.4375rem;
   background-color: var(--color-white);
-  border-radius: 1.25rem;
 }
 .container picture img {
+  width: 100%;
   height: auto;
-  border-radius: 1.25rem 1.25rem 0 0;
 }
 
 .signup-form {
@@ -249,7 +246,7 @@ body {
   background-color: hsla(4, 100%, 67%, 0.15);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .container {
     display: flex;
     flex-direction: row-reverse;
@@ -261,9 +258,6 @@ body {
   }
   .container picture {
     flex: 1;
-  }
-  .container img {
-    width: 100%;
   }
 
   .signup-form {
