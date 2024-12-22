@@ -107,7 +107,6 @@ body {
 }
 
 .container {
-  display: block;
   background-color: var(--color-white);
 }
 .container picture img {
