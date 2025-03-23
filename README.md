@@ -8,7 +8,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/newsletter-sign-up-with-success-message-l_qnkCyz9Z)
+- [Solution](https://www.frontendmentor.io/solutions/newsletter-sign-up-with-success-message-l_qnkCyz9Z)
 - [Live Site](https://zxjklp.github.io/newsletter-sign-up-with-success-message-main/)
 
 ### Built With
